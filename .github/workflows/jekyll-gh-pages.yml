@@ -1,0 +1,19 @@
+# Site Settings
+title: Ameer Riaz
+email: Abdulameer4321@gmail.com
+description: >-
+  Tech Lawyer and Data Privacy Professional from Bangalore. Specializing in Cyber Law, DPDP, GDPR AND GRC 
+  IP Strategy, and Digital Transformation.
+  
+# Theme Settings
+remote_theme: pages-themes/minimal
+
+# Personal Info for Sidebar
+header_pages:
+  - index.md
+  - blog.md
+
+# Build Settings (for GitHub Actions)
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
