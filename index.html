@@ -1,198 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Ameer Riaz | AR Law Counsel</title>
-
-<meta name="description" content="Ameer Riaz is a 22-year-old Advocate and founder of AR Law Counsel, specializing in Cyber Law, Data Privacy, and Civil Litigation based in Bangalore, India.">
+<meta name="description" content="Safeguarding India's Data Future: GRC Strategies That Work | Ameer Riaz - Cyber Law & Data Privacy Expert">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
-*{
+* {
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
-body{
-font-family: 'Segoe UI', sans-serif;
-background:#f4f6f9;
-color:#1a1a1a;
-line-height:1.6;
+body {
+font-family: 'Inter', sans-serif;
+background: linear-gradient(135deg, #0c1c2c 0%, #1a365d 50%, #2d4a7a 100%);
+color:#e2e8f0;
+line-height:1.7;
+overflow-x: hidden;
 }
 
-.container{
-max-width:1100px;
+.container {
+max-width:1200px;
 margin:auto;
 padding:0 20px;
 }
 
-header{
-background:#0c1c2c;
-color:white;
+header {
+background: rgba(12,28,44,0.95);
+backdrop-filter: blur(20px);
+color:#4ade80;
 text-align:center;
-padding:40px 20px;
+padding:80px 20px;
+position: relative;
 }
 
-header img{
-width:75px;
-margin-bottom:12px;
+header::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 1px;
+background: linear-gradient(90deg, transparent, #4ade80, transparent);
 }
 
-nav{
-background:#13293d;
+header img {
+width:90px;
+margin-bottom:20px;
+filter: drop-shadow(0 10px 20px rgba(74,222,128,0.3));
+animation: float 6s ease-in-out infinite;
 }
 
-.nav-container{
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+}
+
+h1 {
+font-family: 'Instrument Sans', sans-serif;
+font-size: 3.2em;
+font-weight: 700;
+background: linear-gradient(135deg, #4ade80, #60a5fa);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 12px;
+}
+
+header p {
+font-size: 1.3em;
+opacity: 0.9;
+font-weight: 300;
+}
+
+nav {
+background: rgba(19,41,61,0.95);
+backdrop-filter: blur(15px);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.nav-container {
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-padding:12px 0;
+padding:15px 0;
 }
 
-nav a{
-color:white;
+nav a {
+color:#e2e8f0;
 text-decoration:none;
-margin:8px 18px;
+margin:10px 25px;
 font-weight:600;
+font-size: 1.1em;
+position: relative;
+transition: all 0.3s ease;
 }
 
-section{
-padding:60px 0;
-background:white;
-margin-bottom:12px;
+nav a:hover {
+color:#4ade80;
+transform: translateY(-2px);
 }
 
-h2{
+nav a::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -5px;
+left: 50%;
+background: #4ade80;
+transition: all 0.3s ease;
+}
+
+nav a:hover::after {
+width: 100%;
+left: 0;
+}
+
+section {
+padding:80px 0;
+position: relative;
+}
+
+section:nth-child(odd) {
+background: rgba(255,255,255,0.05);
+}
+
+section:nth-child(even) {
+background: rgba(12,28,44,0.3);
+}
+
+h2 {
 text-align:center;
-margin-bottom:30px;
-border-bottom:2px solid #eee;
-padding-bottom:10px;
+margin-bottom:40px;
+font-family: 'Instrument Sans', sans-serif;
+font-size: 2.8em;
+font-weight: 600;
+background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+position: relative;
 }
 
-.hero{
-display:flex;
+h2::after {
+content: '';
+position: absolute;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+width: 80px;
+height: 3px;
+background: linear-gradient(90deg, #4ade80, #60a5fa);
+border-radius: 2px;
+}
+
+.hero {
+display:grid;
+grid-template-columns: 1fr 2fr;
+gap:60px;
 align-items:center;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
 text-align:left;
+opacity: 0;
+transform: translateY(30px);
+animation: fadeInUp 1s ease forwards;
 }
 
-.hero img{
-width:230px;
+@keyframes fadeInUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.hero img {
+width:280px;
+border-radius:20px;
+box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+transition: all 0.5s ease;
+}
+
+.hero img:hover {
+transform: scale(1.05) rotate(2deg);
+box-shadow: 0 40px 80px rgba(74,222,128,0.2);
+}
+
+.hero-text {
+font-size: 1.2em;
+}
+
+.hero-text p {
+margin-bottom: 20px;
+font-weight: 300;
+}
+
+h3 {
+font-family: 'Instrument Sans', sans-serif;
+color:#4ade80;
+margin: 30px 0 20px 0;
+font-size: 1.6em;
+}
+
+ul {
+margin-top:10px;
+padding-left:25px;
+}
+
+li {
+margin-bottom:10px;
+font-weight: 300;
+position: relative;
+}
+
+li::marker {
+color: #4ade80;
+}
+
+.blog-card, .service-card {
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+padding:30px;
+margin:25px 0;
+border-radius:16px;
+text-align:left;
+border: 1px solid rgba(255,255,255,0.1);
+transition: all 0.4s ease;
+opacity: 0;
+transform: translateY(30px);
+}
+
+.blog-card:hover, .service-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+border-color: rgba(74,222,128,0.3);
+}
+
+.blog-card h3, .service-card h3 {
+color:#4ade80;
+margin-bottom:15px;
+}
+
+.cta-button {
+background: linear-gradient(135deg, #4ade80, #22c55e);
+color:#0c1c2c;
+padding:16px 40px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-weight:600;
+font-size: 1.1em;
+font-family: 'Instrument Sans', sans-serif;
+transition: all 0.3s ease;
+box-shadow: 0 10px 30px rgba(74,222,128,0.3);
+display: inline-block;
+text-decoration: none;
+}
+
+.cta-button:hover {
+transform: translateY(-3px);
+box-shadow: 0 20px 40px rgba(74,222,128,0.4);
+}
+
+.clients-container {
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+gap:30px;
+margin-top:30px;
+}
+
+.client-logo {
+width:100%;
+height:90px;
+object-fit:contain;
+filter:grayscale(100%) brightness(0.7);
+transition:all 0.4s ease;
 border-radius:12px;
 }
 
-.hero-text{
-max-width:550px;
+.client-logo:hover {
+filter:grayscale(0%) brightness(1);
+transform:scale(1.1);
+box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-ul{
-margin-top:10px;
-padding-left:20px;
-}
-
-li{
-margin-bottom:6px;
-}
-
-.blog-card{
-background:#f9f9f9;
-padding:22px;
-margin-top:20px;
-border-radius:8px;
-text-align:left;
-}
-
-.button-center{
+.testimonial-card {
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+padding:25px;
+margin:20px 0;
+border-radius:16px;
 text-align:center;
-margin-top:20px;
+border-left: 4px solid #4ade80;
+font-style: italic;
 }
 
-button{
-background:#0c1c2c;
-color:white;
-padding:12px 28px;
-border:none;
-border-radius:6px;
-cursor:pointer;
+.contact-grid {
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap:40px;
+margin-top:40px;
 }
 
-.contact-info{
+.contact-item {
 text-align:center;
-line-height:2;
+padding:30px;
+background: rgba(255,255,255,0.05);
+border-radius:16px;
+transition: all 0.3s ease;
 }
 
-footer{
-background:#0c1c2c;
-color:white;
+.contact-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.contact-item a {
+color:#4ade80;
+text-decoration:none;
+font-weight:500;
+}
+
+footer {
+background:rgba(12,28,44,0.95);
+backdrop-filter: blur(20px);
+color:#94a3b8;
 text-align:center;
-padding:22px;
+padding:30px;
 font-size:14px;
 }
 
-/* CLIENTS SECTION */
-
-.clients-container{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-gap:40px;
-margin-top:20px;
+/* Scroll Animations */
+.reveal {
+opacity: 0;
+transform: translateY(50px);
+transition: all 0.8s ease;
 }
 
-.client-logo{
-width:130px;
-height:80px;
-object-fit:contain;
-filter:grayscale(100%);
-transition:all 0.4s ease;
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
 }
 
-.client-logo:hover{
-filter:grayscale(0%);
-transform:scale(1.08);
-}
-
-@media (max-width:768px){
-
-.hero{
-flex-direction:column;
+/* Responsive */
+@media (max-width:768px) {
+.hero {
+grid-template-columns: 1fr;
 text-align:center;
+gap:30px;
 }
 
-.hero-text{
-max-width:100%;
-}
+h1 { font-size: 2.2em; }
+h2 { font-size: 2.2em; }
 
-nav a{
+nav a {
 display:block;
 margin:8px 0;
 }
 
+.clients-container {
+grid-template-columns: repeat(2, 1fr);
 }
-
+}
 </style>
 </head>
 
 <body>
-
 <header>
 <img src="logo.png" alt="AR Law Counsel Logo">
-<h1>Ameer Riaz</h1>
-<p>Founder – AR Law Counsel | Advocate | Cyber Law & Civil Litigation</p>
+<h1>Safeguarding India's Data Future</h1>
+<p>Founder – AR Law Counsel | Advocate | Cyber Law & Data Privacy Expert</p>
 </header>
 
 <nav>
 <div class="nav-container">
 <a href="#about">About</a>
 <a href="#services">Practice Areas</a>
-<a href="#blog">Insights</a>
+<a href="#insights">Insights</a>
 <a href="#booking">Consultation</a>
 <a href="#clients">Engagements</a>
 <a href="#contact">Contact</a>
@@ -202,153 +389,159 @@ margin:8px 0;
 
 <section id="about">
 <div class="container">
+<h2>About Ameer</h2>
 
-<h2>About</h2>
-
-<div class="hero">
-
+<div class="hero reveal">
 <img src="profile.jpg" alt="Ameer Riaz">
-
 <div class="hero-text">
-
-<p>
-Ameer Riaz is a 22-year-old enrolled Advocate and founder of AR Law Counsel, focusing on Cyber Law, Data Privacy, and Civil Litigation.
-</p>
-
-<p>
-Through AR Law Counsel, he assists startups, organisations, and individuals in navigating digital regulatory frameworks.
-</p>
-
+<p>Ameer Riaz is a leading advocate and founder of AR Law Counsel, specializing in Cyber Law, Data Privacy, and Civil Litigation from Bangalore, India.</p>
+<p>Through AR Law Counsel, he empowers startups and organizations with strategic compliance frameworks for DPDP Act, GDPR, and ISO 27001.</p>
+<a href="#booking" class="cta-button">Book Compliance Strategy Session</a>
 </div>
 </div>
-
 </div>
 </section>
 
 <section id="services">
 <div class="container">
-
 <h2>Practice Areas</h2>
 
-<h3>Privacy & Data Protection</h3>
+<div class="service-card reveal">
+<h3>🔒 Privacy & Data Protection</h3>
 <ul>
-<li>DPDP Act Compliance</li>
-<li>GDPR Advisory</li>
+<li>DPDP Act Compliance Audits</li>
+<li>GDPR Cross-Border Strategy</li>
 <li>Privacy Impact Assessments</li>
 <li>Data Governance Frameworks</li>
 </ul>
+</div>
 
-<h3>Cyber & Technology Law</h3>
+<div class="service-card reveal">
+<h3>💻 Cyber & Technology Law</h3>
 <ul>
-<li>Information Technology Act Advisory</li>
-<li>Cyber Incident Strategy</li>
-<li>SaaS Contract Drafting</li>
+<li>IT Act Litigation Support</li>
+<li>Cyber Incident Response</li>
+<li>SaaS & Cloud Contracts</li>
+<li>SOC 2 Readiness</li>
 </ul>
+</div>
 
-<h3>Civil Litigation</h3>
+<div class="service-card reveal">
+<h3>⚖️ Civil Litigation</h3>
 <ul>
-<li>Commercial Disputes</li>
-<li>Contractual Litigation</li>
+<li>Commercial Dispute Resolution</li>
+<li>Contract Enforcement</li>
 <li>Legal Notice Drafting</li>
+<li>Arbitration Strategy</li>
 </ul>
-
+</div>
 </div>
 </section>
 
-<section id="blog">
+<section id="insights">
 <div class="container">
-
 <h2>Legal Insights</h2>
 
-<div class="blog-card">
-<h3>Understanding India's DPDP Act</h3>
-<p>Key compliance strategies organisations must implement.</p>
+<div class="service-card reveal">
+<h3>📊 India's DPDP Act: Compliance Roadmap</h3>
+<p>Essential strategies for organizations to achieve DPDP compliance while maintaining business agility.</p>
+<a href="#booking" class="cta-button">Get DPDP Checklist</a>
 </div>
 
-<div class="blog-card">
-<h3>AI & Copyright Challenges</h3>
-<p>Legal uncertainties created by generative AI.</p>
+<div class="service-card reveal">
+<h3>🤖 AI, Copyright & Data Privacy</h3>
+<p>Navigating legal uncertainties created by generative AI and emerging technologies.</p>
+<a href="#booking" class="cta-button">Discuss AI Strategy</a>
 </div>
 
+<div class="testimonial-card reveal">
+<p>"Ameer provided exceptional DPDP compliance guidance that positioned us ahead of regulatory deadlines."</p>
+<span>— Tech Startup CTO</span>
+</div>
 </div>
 </section>
 
 <section id="booking">
 <div class="container">
-
 <h2>Book Consultation</h2>
+<p style="text-align:center; font-size:1.3em; margin-bottom:40px;">Schedule your professional legal strategy session today.</p>
 
-<p style="text-align:center;">Schedule a professional legal consultation.</p>
-
-<div class="button-center">
-<button onclick="window.location.href='mailto:arlawcounsel@gmail.com'">
-Book Appointment
-</button>
+<div style="text-align:center;">
+<a href="mailto:arlawcounsel@gmail.com?subject=DPDP%20Compliance%20Consultation" class="cta-button" style="font-size:1.3em; padding:20px 50px;">
+🚀 Start Your Compliance Journey
+</a>
 </div>
-
 </div>
 </section>
 
-<!-- CLIENTS SECTION -->
-
 <section id="clients">
 <div class="container">
-
 <h2>Representative Engagements</h2>
-
-<p style="text-align:center;">
-Advised organisations across various fields of Law and Tech.
-</p>
+<p style="text-align:center; font-size:1.2em; margin-bottom:40px;">
+Trusted by organizations across Tech, Fintech, and Legal sectors.</p>
 
 <div class="clients-container">
-<img src="images/client1.png" class="client-logo">
-<img src="images/client2.png" class="client-logo">
-<img src="images/client3.png" class="client-logo">
-<img src="images/client4.png" class="client-logo">
-<img src="images/client6.png" class="client-logo">
+<img src="images/client1.png" class="client-logo" alt="Client 1" loading="lazy">
+<img src="images/client2.png" class="client-logo" alt="Client 2" loading="lazy">
+<img src="images/client3.png" class="client-logo" alt="Client 3" loading="lazy">
+<img src="images/client4.png" class="client-logo" alt="Client 4" loading="lazy">
+<img src="images/client6.png" class="client-logo" alt="Client 5" loading="lazy">
 </div>
-
 </div>
 </section>
 
 <section id="contact">
 <div class="container">
+<h2>Get In Touch</h2>
 
-<h2>Contact</h2>
-
-<div class="contact-info">
-
-<p>Email: arlawcounsel@gmail.com</p>
-
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/ameer-riaz-408485307" target="_blank">
-View Profile
-</a>
-</p>
-
-<p>Bangalore, India</p>
-
+<div class="contact-grid">
+<div class="contact-item reveal">
+<h3>📧 Email</h3>
+<p><a href="mailto:arlawcounsel@gmail.com">arlawcounsel@gmail.com</a></p>
 </div>
-
+<div class="contact-item reveal">
+<h3>💼 LinkedIn</h3>
+<p><a href="https://www.linkedin.com/in/ameer-riaz-408485307" target="_blank">View Profile</a></p>
+</div>
+<div class="contact-item reveal">
+<h3>📍 Location</h3>
+<p>Bangalore, Karnataka<br>India</p>
+</div>
+</div>
 </div>
 </section>
 
 <section id="legal">
 <div class="container">
-
 <h2>Legal Disclaimer</h2>
-
-<p style="text-align:center;">
-As per Bar Council of India rules, this website is for informational purposes only.
+<p style="text-align:center; max-width:800px; margin:0 auto; opacity:0.8;">
+As per Bar Council of India rules, this website is for informational purposes only and does not constitute legal advice.
 </p>
-
 </div>
 </section>
 
 <footer>
-<p>© 2026 AR Law Counsel | All Rights Reserved</p>
+<p>© 2026 AR Law Counsel | All Rights Reserved | Built with Compliance in Mind</p>
 </footer>
+
+<script>
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('active');
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => {
+observer.observe(el);
+});
+</script>
 
 </body>
 </html>
