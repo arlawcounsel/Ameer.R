@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ameer Riaz | AR Law Counsel - Data Privacy & Compliance</title>
-<meta name="description" content="Expert DPDP Act, GDPR & Compliance Frameworks | AR Law Counsel - Bangalore">
+<title>Ameer Riaz | AR Law Counsel - Data Privacy & Compliance Authority</title>
+<meta name="description" content="DPDP Act, GDPR Compliance & Policy Frameworks | AR Law Counsel - Bangalore Based Legal Expertise">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
@@ -19,8 +19,8 @@ box-sizing:border-box;
 --primary: #6366f1;
 --primary-dark: #4f46e5;
 --accent: #10b981;
---glass: rgba(255,255,255,0.1);
---glass-dark: rgba(15,23,42,0.8);
+--glass: rgba(255,255,255,0.08);
+--glass-dark: rgba(15,23,42,0.9);
 --text-primary: #f8fafc;
 --text-secondary: #cbd5e1;
 --shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
@@ -42,10 +42,17 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: radial-gradient(circle at 20% 80%, rgba(120,119,198,0.3) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(255,119,198,0.3) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(120,219,255,0.2) 0%, transparent 50%);
+background: 
+    radial-gradient(circle at 20% 80%, rgba(120,119,198,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,119,198,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120,219,255,0.08) 0%, transparent 50%);
 z-index: -1;
+animation: bgShift 20s ease-in-out infinite alternate;
+}
+
+@keyframes bgShift {
+0% { transform: scale(1); }
+100% { transform: scale(1.05); }
 }
 
 .container {
@@ -54,123 +61,53 @@ margin: 0 auto;
 padding: 0 24px;
 }
 
-.hero-section {
-min-height: 100vh;
+header {
+position: relative;
+background: var(--glass-dark);
+backdrop-filter: blur(25px);
+border-bottom: 1px solid rgba(255,255,255,0.1);
+padding: 24px 0;
+z-index: 100;
+}
+
+.header-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 16px;
+}
+
+.logo-container {
 display: flex;
 align-items: center;
-position: relative;
-padding: 120px 0;
+gap: 16px;
 }
 
-.hero-content {
-max-width: 900px;
-}
-
-.hero-badge {
-display: inline-block;
-background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-color: white;
-padding: 8px 20px;
-border-radius: 50px;
-font-size: 0.875rem;
-font-weight: 600;
-letter-spacing: 0.05em;
-margin-bottom: 24px;
-animation: pulse 2s infinite;
-box-shadow: 0 4px 15px rgba(99,102,241,0.4);
-}
-
-@keyframes pulse {
-0%, 100% { box-shadow: 0 4px 15px rgba(99,102,241,0.4); }
-50% { box-shadow: 0 4px 25px rgba(99,102,241,0.6); }
-}
-
-.hero-title {
-font-family: 'Space Grotesk', sans-serif;
-font-size: clamp(3.5rem, 8vw, 6rem);
-font-weight: 700;
-line-height: 0.9;
-background: linear-gradient(135deg, var(--text-primary) 0%, #e2e8f0 50%, var(--accent) 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-margin-bottom: 32px;
-}
-
-.hero-subtitle {
-font-size: 1.5rem;
-color: var(--text-secondary);
-font-weight: 300;
-margin-bottom: 48px;
-max-width: 600px;
-}
-
-.cta-primary {
-background: linear-gradient(135deg, var(--accent), #059669);
-color: #0f172a;
-padding: 20px 48px;
+.logo {
+width: 75px;
+height: 75px;
 border-radius: 16px;
-font-size: 1.25rem;
-font-weight: 700;
-font-family: 'Space Grotesk', sans-serif;
-text-decoration: none;
-display: inline-flex;
-align-items: center;
-gap: 12px;
 box-shadow: var(--shadow);
 transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-position: relative;
-overflow: hidden;
 }
 
-.cta-primary::before {
-content: '';
-position: absolute;
-top: 0;
-left: -100%;
-width: 100%;
-height: 100%;
-background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-transition: left 0.6s;
-}
-
-.cta-primary:hover::before {
-left: 100%;
-}
-
-.cta-primary:hover {
-transform: translateY(-4px);
+.logo:hover {
+transform: scale(1.1) rotate(5deg);
 box-shadow: var(--shadow-hover);
 }
 
-.cta-secondary {
-color: var(--accent);
-font-size: 1.125rem;
-font-weight: 500;
-text-decoration: none;
-border-bottom: 2px solid transparent;
-transition: all 0.3s ease;
-}
-
-.cta-secondary:hover {
-border-bottom-color: var(--accent);
-}
-
-nav {
-position: fixed;
-top: 0;
-width: 100%;
-background: rgba(15,23,42,0.95);
-backdrop-filter: blur(25px);
-z-index: 1000;
-padding: 20px 0;
-transition: all 0.3s ease;
+.brand-name {
+font-family: 'Space Grotesk', sans-serif;
+font-size: 1.75rem;
+font-weight: 700;
+background: linear-gradient(135deg, var(--primary), var(--accent));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .nav-container {
 display: flex;
-justify-content: center;
-align-items: center;
-gap: 48px;
+gap: 32px;
 }
 
 .nav-link {
@@ -178,71 +115,186 @@ color: var(--text-secondary);
 text-decoration: none;
 font-weight: 500;
 font-size: 1rem;
-position: relative;
-padding: 8px 0;
+padding: 8px 16px;
+border-radius: 8px;
 transition: all 0.3s ease;
+position: relative;
 }
 
-.nav-link::after {
+.nav-link:hover,
+.nav-link.active {
+color: var(--text-primary);
+background: var(--glass);
+}
+
+.hero-section {
+min-height: 100vh;
+display: flex;
+align-items: center;
+padding: 140px 0 100px;
+position: relative;
+}
+
+.hero-content {
+max-width: 1000px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+align-items: center;
+}
+
+.hero-text h1 {
+font-family: 'Space Grotesk', sans-serif;
+font-size: clamp(3rem, 7vw, 5.5rem);
+font-weight: 700;
+line-height: 0.95;
+background: linear-gradient(135deg, var(--text-primary) 0%, #e2e8f0 50%, var(--accent) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 32px;
+}
+
+.hero-text p {
+font-size: 1.4rem;
+color: var(--text-secondary);
+font-weight: 300;
+margin-bottom: 48px;
+line-height: 1.8;
+}
+
+.hero-image {
+position: relative;
+}
+
+.hero-image img {
+width: 100%;
+max-width: 400px;
+border-radius: 32px;
+box-shadow: var(--shadow);
+transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-image::before {
 content: '';
 position: absolute;
-bottom: 0;
-left: 0;
-width: 0;
-height: 2px;
-background: linear-gradient(90deg, var(--primary), var(--accent));
-transition: width 0.3s ease;
+top: -20px;
+left: -20px;
+right: -20px;
+bottom: -20px;
+background: linear-gradient(45deg, var(--primary), var(--accent));
+border-radius: 36px;
+z-index: -1;
+opacity: 0;
+transition: opacity 0.4s ease;
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
-width: 100%;
+.hero-image:hover::before {
+opacity: 1;
 }
 
-.nav-link:hover {
-color: var(--text-primary);
+.hero-image:hover img {
+transform: scale(1.05);
+}
+
+.cta-primary {
+background: linear-gradient(135deg, var(--accent), #059669);
+color: #0f172a;
+padding: 22px 52px;
+border-radius: 20px;
+font-size: 1.25rem;
+font-weight: 700;
+font-family: 'Space Grotesk', sans-serif;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 16px;
+box-shadow: var(--shadow);
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+position: relative;
+overflow: hidden;
+}
+
+.cta-primary:hover {
+transform: translateY(-6px);
+box-shadow: var(--shadow-hover);
+}
+
+.cta-badge {
+display: inline-block;
+background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+color: white;
+padding: 10px 24px;
+border-radius: 50px;
+font-size: 0.9rem;
+font-weight: 600;
+letter-spacing: 0.05em;
+margin-bottom: 32px;
+animation: pulse-glow 3s infinite;
+box-shadow: 0 8px 25px rgba(99,102,241,0.4);
+}
+
+@keyframes pulse-glow {
+0%, 100% { box-shadow: 0 8px 25px rgba(99,102,241,0.4); }
+50% { box-shadow: 0 8px 35px rgba(99,102,241,0.6); }
 }
 
 section {
 padding: 120px 0;
-position: relative;
 }
 
 .section-header {
 text-align: center;
-margin-bottom: 80px;
+margin-bottom: 96px;
 }
 
 .section-title {
 font-family: 'Space Grotesk', sans-serif;
-font-size: clamp(2.5rem, 5vw, 4rem);
+font-size: clamp(2.5rem, 6vw, 4.5rem);
 font-weight: 700;
 background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-margin-bottom: 16px;
+margin-bottom: 20px;
 }
 
 .section-subtitle {
-font-size: 1.25rem;
+font-size: 1.3rem;
 color: var(--text-secondary);
 font-weight: 300;
-max-width: 600px;
+max-width: 700px;
 margin: 0 auto;
+}
+
+.about-content {
+display: grid;
+grid-template-columns: 1fr 2fr;
+gap: 80px;
+align-items: center;
+}
+
+.about-image {
+position: relative;
+}
+
+.about-image img {
+width: 100%;
+max-width: 350px;
+border-radius: 24px;
+box-shadow: var(--shadow);
 }
 
 .services-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-gap: 40px;
+grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+gap: 48px;
 }
 
 .service-card {
 background: var(--glass);
-backdrop-filter: blur(20px);
-border: 1px solid rgba(255,255,255,0.1);
-border-radius: 24px;
-padding: 48px 40px;
+backdrop-filter: blur(25px);
+border: 1px solid rgba(255,255,255,0.12);
+border-radius: 28px;
+padding: 56px 48px;
 position: relative;
 overflow: hidden;
 transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -255,10 +307,11 @@ position: absolute;
 top: 0;
 left: 0;
 right: 0;
-height: 4px;
+height: 6px;
 background: linear-gradient(90deg, var(--primary), var(--accent));
 transform: scaleX(0);
-transition: transform 0.4s ease;
+transition: transform 0.5s ease;
+z-index: 2;
 }
 
 .service-card:hover::before {
@@ -266,25 +319,25 @@ transform: scaleX(1);
 }
 
 .service-card:hover {
-transform: translateY(-12px);
-border-color: rgba(99,102,241,0.3);
+transform: translateY(-16px) scale(1.02);
+border-color: rgba(99,102,241,0.4);
 box-shadow: var(--shadow-hover);
 }
 
 .service-icon {
-font-size: 3rem;
+font-size: 3.5rem;
 background: linear-gradient(135deg, var(--primary), var(--accent));
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-margin-bottom: 24px;
+margin-bottom: 32px;
 }
 
 .service-title {
 font-family: 'Space Grotesk', sans-serif;
-font-size: 1.75rem;
+font-size: 2rem;
 font-weight: 600;
 color: var(--text-primary);
-margin-bottom: 16px;
+margin-bottom: 24px;
 }
 
 .service-list {
@@ -295,71 +348,109 @@ padding: 0;
 .service-list li {
 color: var(--text-secondary);
 font-weight: 400;
-padding: 8px 0 8px 8px;
+padding: 12px 0 12px 12px;
 position: relative;
+font-size: 1.1rem;
 }
 
 .service-list li::before {
 content: '→';
 color: var(--accent);
 font-weight: 700;
-margin-right: 12px;
+font-size: 1.2rem;
+margin-right: 16px;
+position: absolute;
+left: 0;
+}
+
+.clients-section {
+background: var(--glass-dark);
+border-radius: 32px;
+padding: 96px 0;
+margin: 48px 0;
+}
+
+.clients-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+gap: 40px;
+justify-items: center;
+}
+
+.client-logo {
+width: 140px;
+height: 90px;
+object-fit: contain;
+filter: grayscale(100%) brightness(0.6);
+transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+border-radius: 16px;
+padding: 16px;
+background: rgba(255,255,255,0.05);
+cursor: pointer;
+}
+
+.client-logo:hover {
+filter: grayscale(0%) brightness(1);
+transform: translateY(-12px) scale(1.1);
+box-shadow: var(--shadow);
+background: rgba(255,255,255,0.1);
 }
 
 .insights-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-gap: 32px;
+grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+gap: 40px;
 }
 
 .insight-card {
 background: var(--glass);
 backdrop-filter: blur(20px);
 border: 1px solid rgba(255,255,255,0.1);
-border-radius: 20px;
+border-radius: 24px;
 overflow: hidden;
-transition: all 0.4s ease;
+transition: all 0.5s ease;
 cursor: pointer;
 }
 
 .insight-card:hover {
-transform: translateY(-8px) scale(1.02);
+transform: translateY(-12px);
 box-shadow: var(--shadow-hover);
 }
 
 .insight-image {
-height: 220px;
+height: 240px;
 background: linear-gradient(135deg, var(--primary), var(--primary-dark));
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: 4rem;
+font-size: 4.5rem;
 color: white;
-transition: all 0.4s ease;
+transition: all 0.5s ease;
 }
 
 .insight-card:hover .insight-image {
-filter: brightness(1.1);
+filter: brightness(1.15) contrast(1.1);
+transform: scale(1.05);
 }
 
 .insight-content {
-padding: 32px;
+padding: 40px;
 }
 
 .insight-title {
 font-family: 'Space Grotesk', sans-serif;
-font-size: 1.5rem;
+font-size: 1.75rem;
 font-weight: 600;
-margin-bottom: 12px;
+margin-bottom: 16px;
 color: var(--text-primary);
 }
 
 .cta-section {
 text-align: center;
-background: var(--glass-dark);
-border-radius: 32px;
-padding: 96px 40px;
-margin: 40px 0;
+background: linear-gradient(135deg, var(--glass-dark), var(--glass));
+border-radius: 40px;
+padding: 120px 48px;
+margin: 64px 0;
 position: relative;
 overflow: hidden;
 }
@@ -369,41 +460,80 @@ content: '';
 position: absolute;
 top: -50%;
 right: -20%;
-width: 400px;
-height: 400px;
-background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%);
-animation: float 8s ease-in-out infinite;
+width: 500px;
+height: 500px;
+background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%);
+animation: float 10s ease-in-out infinite;
+border-radius: 50%;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0px) rotate(0deg); }
+50% { transform: translateY(-20px) rotate(180deg); }
 }
 
 .contact-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 40px;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 48px;
 }
 
 .contact-card {
 background: var(--glass);
-backdrop-filter: blur(20px);
-border: 1px solid rgba(255,255,255,0.1);
-border-radius: 24px;
-padding: 48px 32px;
+backdrop-filter: blur(25px);
+border: 1px solid rgba(255,255,255,0.12);
+border-radius: 28px;
+padding: 56px 40px;
 text-align: center;
-transition: all 0.4s ease;
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 cursor: pointer;
+position: relative;
+overflow: hidden;
+}
+
+.contact-card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(99,102,241,0.2), transparent);
+transition: width 0.6s;
+}
+
+.contact-card:hover::before {
+width: 100%;
 }
 
 .contact-card:hover {
-transform: translateY(-8px);
-border-color: rgba(16,185,129,0.3);
-box-shadow: var(--shadow);
+transform: translateY(-10px);
+border-color: rgba(16,185,129,0.4);
+box-shadow: var(--shadow-hover);
 }
 
 .contact-icon {
-font-size: 3.5rem;
+font-size: 4rem;
 background: linear-gradient(135deg, var(--primary), var(--accent));
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-margin-bottom: 24px;
+margin-bottom: 32px;
+}
+
+.legal-section {
+background: var(--glass-dark);
+border-radius: 24px;
+padding: 64px 0;
+margin: 48px 0;
+}
+
+.legal-content {
+text-align: center;
+max-width: 900px;
+margin: 0 auto;
+opacity: 0.85;
+font-size: 1.1rem;
+line-height: 1.8;
 }
 
 footer {
@@ -411,46 +541,70 @@ background: var(--glass-dark);
 text-align: center;
 padding: 48px 0;
 border-top: 1px solid rgba(255,255,255,0.1);
+color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+.hero-content {
+grid-template-columns: 1fr;
+gap: 48px;
+text-align: center;
+}
 }
 
 @media (max-width: 768px) {
 .nav-container {
-flex-direction: column;
+flex-wrap: wrap;
 gap: 16px;
+justify-content: center;
 }
-.hero-section {
-padding: 80px 0;
-text-align: center;
-}
-.services-grid {
+.services-grid, .insights-grid {
 grid-template-columns: 1fr;
+}
+.clients-grid {
+grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 }
 </style>
 </head>
 
 <body>
-<nav>
+<header>
 <div class="container">
+<div class="header-top">
+<div class="logo-container">
+<img src="logo.png" alt="AR Law Counsel Logo" class="logo">
+<span class="brand-name">AR Law Counsel</span>
+</div>
+<nav>
 <div class="nav-container">
 <a href="#about" class="nav-link">About</a>
 <a href="#services" class="nav-link">Services</a>
 <a href="#insights" class="nav-link">Insights</a>
+<a href="#clients" class="nav-link">Engagements</a>
 <a href="#booking" class="nav-link">Consult</a>
 <a href="#contact" class="nav-link">Contact</a>
-</div>
+<a href="#legal" class="nav-link">Legal</a>
 </div>
 </nav>
+</div>
+</div>
+</header>
 
 <section class="hero-section">
 <div class="container">
 <div class="hero-content">
-<div class="hero-badge">Data Privacy Authority</div>
-<h1 class="hero-title">Safeguarding India's Digital Future</h1>
-<p class="hero-subtitle">Strategic DPDP Act compliance, GDPR frameworks & policy drafting for forward-thinking organizations.</p>
+<div class="hero-text">
+<div class="cta-badge">Data Privacy Authority • Bangalore</div>
+<h1>Safeguarding India's Digital Future</h1>
+<p>Strategic DPDP Act compliance, GDPR frameworks, policy drafting & complete regulatory solutions for forward-thinking organizations and startups.</p>
 <a href="mailto:arlawcounsel@gmail.com?subject=DPDP+Compliance+Consultation" class="cta-primary">
-🚀 Start Compliance Journey
+🚀 Start Your Compliance Journey Now
 </a>
+</div>
+<div class="hero-image">
+<img src="profile.jpg" alt="Ameer Riaz - Data Privacy Expert">
+</div>
 </div>
 </div>
 </section>
@@ -459,13 +613,20 @@ grid-template-columns: 1fr;
 <div class="container">
 <div class="section-header">
 <h2 class="section-title">Legal Compliance Expertise</h2>
-<p class="section-subtitle">Trusted frameworks for the digital age</p>
+<p class="section-subtitle">Building scalable frameworks for the digital age from Bangalore, India</p>
 </div>
-<div class="hero-content">
-<img src="profile.jpg" alt="Ameer Riaz" style="width: 300px; height: 300px; border-radius: 24px; box-shadow: var(--shadow); float: right; margin: 0 0 32px 32px;">
-<p style="font-size: 1.2rem; line-height: 1.8; max-width: 800px;">
-Ameer Riaz, founder of AR Law Counsel, specializes in data privacy law and regulatory compliance. With deep expertise in DPDP Act implementation and international frameworks, he helps organizations build robust compliance programs that scale with business growth.
+<div class="about-content">
+<div class="about-image">
+<img src="profile.jpg" alt="Ameer Riaz">
+</div>
+<div>
+<p style="font-size: 1.25rem; line-height: 1.9; color: var(--text-secondary);">
+Ameer Riaz is a 22-year-old enrolled Advocate and founder of AR Law Counsel, specializing in Cyber Law, Data Privacy, and Civil Litigation. Through AR Law Counsel, he assists startups, organizations, and individuals in navigating complex digital regulatory frameworks including DPDP Act implementation and GDPR compliance strategies.
 </p>
+<p style="font-size: 1.25rem; line-height: 1.9; color: var(--text-secondary); margin-top: 24px;">
+With deep expertise in policy drafting, compliance audits, and regulatory strategy, Ameer empowers organizations to stay ahead of India's evolving data protection landscape.
+</p>
+</div>
 </div>
 </div>
 </section>
@@ -473,18 +634,19 @@ Ameer Riaz, founder of AR Law Counsel, specializes in data privacy law and regul
 <section id="services">
 <div class="container">
 <div class="section-header">
-<h2 class="section-title">Compliance Services</h2>
-<p class="section-subtitle">Complete regulatory frameworks for modern organizations</p>
+<h2 class="section-title">Comprehensive Compliance Services</h2>
+<p class="section-subtitle">End-to-end regulatory solutions tailored for modern organizations</p>
 </div>
 <div class="services-grid">
 <div class="service-card">
 <div class="service-icon">🔒</div>
 <h3 class="service-title">Data Privacy & DPDP Act</h3>
 <ul class="service-list">
-<li>DPDP Act Compliance Audits</li>
-<li>Privacy Impact Assessments</li>
-<li>Data Fiduciary Frameworks</li>
-<li>Consent Management Policies</li>
+<li>DPDP Act Compliance Audits & Implementation</li>
+<li>Privacy Impact Assessments (PIA)</li>
+<li>Data Fiduciary Classification & Frameworks</li>
+<li>Consent Management Policies & Systems</li>
+<li>Cross-Border Data Transfer Strategies</li>
 </ul>
 </div>
 
@@ -492,48 +654,76 @@ Ameer Riaz, founder of AR Law Counsel, specializes in data privacy law and regul
 <div class="service-icon">📋</div>
 <h3 class="service-title">Compliance Policies & Contracts</h3>
 <ul class="service-list">
-<li>Privacy Policy Drafting</li>
-<li>Data Processing Agreements</li>
-<li>Compliance Playbooks</li>
-<li>IT Act Contract Review</li>
+<li>Privacy Policy & Notice Drafting</li>
+<li>Data Processing Agreements (DPA)</li>
+<li>Compliance Playbooks & Manuals</li>
+<li>IT Act Compliant Contract Review</li>
+<li>Vendor & Third-Party Agreements</li>
 </ul>
 </div>
 
 <div class="service-card">
 <div class="service-icon">⚖️</div>
-<h3 class="service-title">Governance Frameworks</h3>
+<h3 class="service-title">Governance & Frameworks</h3>
 <ul class="service-list">
-<li>GDPR Cross-Border Strategy</li>
-<li>Data Governance Structures</li>
-<li>Board-Level Compliance</li>
-<li>Audit Readiness Programs</li>
+<li>GDPR Cross-Border Compliance Strategy</li>
+<li>Data Governance Committee Setup</li>
+<li>Board-Level Compliance Reporting</li>
+<li>ISO 27001 & SOC 2 Audit Readiness</li>
+<li>Regulatory Roadmap Development</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
 
+<section id="clients" class="clients-section">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Representative Engagements</h2>
+<p class="section-subtitle">Trusted across Tech, Fintech, Healthcare & Legal sectors in India</p>
+</div>
+<div class="clients-grid">
+<img src="images/client1.png" class="client-logo" alt="Client 1" loading="lazy">
+<img src="images/client2.png" class="client-logo" alt="Client 2" loading="lazy">
+<img src="images/client3.png" class="client-logo" alt="Client 3" loading="lazy">
+<img src="images/client4.png" class="client-logo" alt="Client 4" loading="lazy">
+<img src="images/client6.png" class="client-logo" alt="Client 5" loading="lazy">
+</div>
+<p style="text-align: center; margin-top: 48px; color: var(--text-secondary); font-size: 1.15rem;">
+Advised organizations across various fields of Law, Technology, and Compliance</p>
+</div>
+</section>
+
 <section id="insights">
 <div class="container">
 <div class="section-header">
-<h2 class="section-title">Strategic Insights</h2>
-<p class="section-subtitle">Actionable intelligence for compliance leaders</p>
+<h2 class="section-title">Strategic Legal Insights</h2>
+<p class="section-subtitle">Actionable intelligence for compliance decision-makers</p>
 </div>
 <div class="insights-grid">
 <div class="insight-card">
 <div class="insight-image">📊</div>
 <div class="insight-content">
-<h3 class="insight-title">DPDP Act Roadmap 2026</h3>
-<p>Complete implementation timeline and compliance checklist for Indian organizations.</p>
-<a href="#booking" class="cta-secondary">Get Roadmap →</a>
+<h3 class="insight-title">DPDP Act 2026 Implementation Roadmap</h3>
+<p>Complete timeline, checklists, and strategic frameworks for achieving full compliance.</p>
+<a href="#booking" class="cta-secondary" style="color: var(--accent); font-weight: 500; font-size: 1.1rem;">Get Compliance Roadmap →</a>
 </div>
 </div>
 <div class="insight-card">
 <div class="insight-image">🌐</div>
 <div class="insight-content">
-<h3 class="insight-title">Global Privacy Convergence</h3>
-<p>How DPDP aligns with GDPR, PDPA and emerging frameworks.</p>
-<a href="#booking" class="cta-secondary">Explore Strategy →</a>
+<h3 class="insight-title">Global Privacy Framework Convergence</h3>
+<p>DPDP alignment strategies with GDPR, PDPA Sri Lanka, and other international standards.</p>
+<a href="#booking" class="cta-secondary" style="color: var(--accent); font-weight: 500; font-size: 1.1rem;">Explore Global Strategy →</a>
+</div>
+</div>
+<div class="insight-card">
+<div class="insight-image">⚙️</div>
+<div class="insight-content">
+<h3 class="insight-title">Policy Automation Frameworks</h3>
+<p>Building scalable compliance systems using modern GRC platforms and automation.</p>
+<a href="#booking" class="cta-secondary" style="color: var(--accent); font-weight: 500; font-size: 1.1rem;">Learn Policy Automation →</a>
 </div>
 </div>
 </div>
@@ -542,12 +732,12 @@ Ameer Riaz, founder of AR Law Counsel, specializes in data privacy law and regul
 
 <section id="booking" class="cta-section">
 <div class="container">
-<h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; margin-bottom: 24px;">
-Ready to Get Compliant?</h2>
-<p style="font-size: 1.5rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 48px;">
-Strategic compliance consulting that delivers measurable results.</p>
-<a href="mailto:arlawcounsel@gmail.com?subject=Compliance+Consultation" class="cta-primary" style="font-size: 1.5rem; padding: 24px 64px;">
-📅 Schedule Strategy Session
+<h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(3rem, 7vw, 5rem); font-weight: 700; margin-bottom: 32px; background: linear-gradient(135deg, var(--text-primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+Ready For Compliance Excellence?</h2>
+<p style="font-size: 1.5rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto 64px; line-height: 1.7;">
+Schedule your strategic compliance consultation. From DPDP readiness to global frameworks, get expert guidance that delivers results.</p>
+<a href="mailto:arlawcounsel@gmail.com?subject=Compliance+Consultation+Request" class="cta-primary" style="font-size: 1.4rem; padding: 28px 72px;">
+📅 Book Strategy Session Today
 </a>
 </div>
 </section>
@@ -556,30 +746,39 @@ Strategic compliance consulting that delivers measurable results.</p>
 <div class="container">
 <div class="section-header">
 <h2 class="section-title">Get In Touch</h2>
+<p class="section-subtitle">Ready to discuss your compliance needs? Let's connect.</p>
 </div>
 <div class="contact-grid">
 <div class="contact-card">
 <div class="contact-icon">📧</div>
-<h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; margin-bottom: 16px;">Email</h3>
-<p style="font-size: 1.25rem;"><a href="mailto:arlawcounsel@gmail.com" style="color: var(--text-primary);">arlawcounsel@gmail.com</a></p>
+<h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.75rem; margin-bottom: 20px;">Email</h3>
+<p style="font-size: 1.3rem;"><a href="mailto:arlawcounsel@gmail.com" style="color: var(--text-primary);">arlawcounsel@gmail.com</a></p>
 </div>
 <div class="contact-card">
 <div class="contact-icon">💼</div>
-<h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; margin-bottom: 16px;">LinkedIn</h3>
-<p style="font-size: 1.25rem;"><a href="https://www.linkedin.com/in/ameer-riaz-408485307" target="_blank" style="color: var(--text-primary);">Connect Now</a></p>
+<h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.75rem; margin-bottom: 20px;">LinkedIn</h3>
+<p style="font-size: 1.3rem;"><a href="https://www.linkedin.com/in/ameer-riaz-408485307" target="_blank" style="color: var(--text-primary);">View Profile & Connect</a></p>
 </div>
 <div class="contact-card">
 <div class="contact-icon">📍</div>
-<h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; margin-bottom: 16px;">Location</h3>
-<p>Bangalore, Karnataka<br>India</p>
+<h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.75rem; margin-bottom: 20px;">Location</h3>
+<p style="font-size: 1.3rem;">Bangalore, Karnataka<br>India</p>
 </div>
+</div>
+</div>
+</section>
+
+<section id="legal" class="legal-section">
+<div class="container">
+<div class="legal-content">
+<p>As per Bar Council of India rules, this website is for informational purposes only and does not constitute legal advice or solicitation. All content is provided for educational purposes regarding data privacy, compliance frameworks, and regulatory developments.</p>
 </div>
 </div>
 </section>
 
 <footer>
 <div class="container">
-<p style="opacity: 0.8;">© 2026 AR Law Counsel | All Rights Reserved | Data Privacy First</p>
+<p>© 2026 AR Law Counsel | All Rights Reserved | Data Privacy First | Bangalore, India</p>
 </div>
 </footer>
 
