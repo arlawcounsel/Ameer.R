@@ -24,15 +24,11 @@ color:#1a1a1a;
 line-height:1.6;
 }
 
-/* Container */
-
 .container{
 max-width:1100px;
 margin:auto;
 padding:0 20px;
 }
-
-/* Header */
 
 header{
 background:#0c1c2c;
@@ -45,8 +41,6 @@ header img{
 width:75px;
 margin-bottom:12px;
 }
-
-/* Navigation */
 
 nav{
 background:#13293d;
@@ -66,15 +60,11 @@ margin:8px 18px;
 font-weight:600;
 }
 
-/* Sections */
-
 section{
 padding:60px 0;
 background:white;
 margin-bottom:12px;
 }
-
-/* Headings */
 
 h2{
 text-align:center;
@@ -82,8 +72,6 @@ margin-bottom:30px;
 border-bottom:2px solid #eee;
 padding-bottom:10px;
 }
-
-/* Hero */
 
 .hero{
 display:flex;
@@ -103,8 +91,6 @@ border-radius:12px;
 max-width:550px;
 }
 
-/* Lists */
-
 ul{
 margin-top:10px;
 padding-left:20px;
@@ -114,8 +100,6 @@ li{
 margin-bottom:6px;
 }
 
-/* Blog Cards */
-
 .blog-card{
 background:#f9f9f9;
 padding:22px;
@@ -123,8 +107,6 @@ margin-top:20px;
 border-radius:8px;
 text-align:left;
 }
-
-/* Buttons */
 
 .button-center{
 text-align:center;
@@ -140,14 +122,10 @@ border-radius:6px;
 cursor:pointer;
 }
 
-/* Contact */
-
 .contact-info{
 text-align:center;
 line-height:2;
 }
-
-/* Footer */
 
 footer{
 background:#0c1c2c;
@@ -157,7 +135,29 @@ padding:22px;
 font-size:14px;
 }
 
-/* Mobile Optimization */
+/* CLIENTS SECTION */
+
+.clients-container{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:40px;
+margin-top:20px;
+}
+
+.client-logo{
+width:130px;
+height:80px;
+object-fit:contain;
+filter:grayscale(100%);
+transition:all 0.4s ease;
+}
+
+.client-logo:hover{
+filter:grayscale(0%);
+transform:scale(1.08);
+}
 
 @media (max-width:768px){
 
@@ -194,6 +194,7 @@ margin:8px 0;
 <a href="#services">Practice Areas</a>
 <a href="#blog">Insights</a>
 <a href="#booking">Consultation</a>
+<a href="#clients">Engagements</a>
 <a href="#contact">Contact</a>
 <a href="#legal">Legal</a>
 </div>
@@ -211,11 +212,11 @@ margin:8px 0;
 <div class="hero-text">
 
 <p>
-Ameer Riaz is a 22-year-old enrolled Advocate and founder of AR Law Counsel, focusing on Cyber Law, Data Privacy, and Civil Litigation. He represents a new generation of lawyers working at the intersection of law and technology.
+Ameer Riaz is a 22-year-old enrolled Advocate and founder of AR Law Counsel, focusing on Cyber Law, Data Privacy, and Civil Litigation.
 </p>
 
 <p>
-Through AR Law Counsel, he assists startups, organisations, and individuals in navigating digital regulatory frameworks, cyber dispute resolution, and civil litigation strategy.
+Through AR Law Counsel, he assists startups, organisations, and individuals in navigating digital regulatory frameworks.
 </p>
 
 </div>
@@ -261,12 +262,12 @@ Through AR Law Counsel, he assists startups, organisations, and individuals in n
 
 <div class="blog-card">
 <h3>Understanding India's DPDP Act</h3>
-<p>Key compliance strategies organisations must implement under India's new data protection regime.</p>
+<p>Key compliance strategies organisations must implement.</p>
 </div>
 
 <div class="blog-card">
 <h3>AI & Copyright Challenges</h3>
-<p>Legal uncertainties created by generative AI and intellectual property rights.</p>
+<p>Legal uncertainties created by generative AI.</p>
 </div>
 
 </div>
@@ -283,6 +284,28 @@ Through AR Law Counsel, he assists startups, organisations, and individuals in n
 <button onclick="window.location.href='mailto:arlawcounsel@gmail.com'">
 Book Appointment
 </button>
+</div>
+
+</div>
+</section>
+
+<!-- CLIENTS SECTION -->
+
+<section id="clients">
+<div class="container">
+
+<h2>Representative Engagements</h2>
+
+<p style="text-align:center;">
+Advised organisations across technology and SaaS sectors on cyber law compliance and data protection strategy.
+</p>
+
+<div class="clients-container">
+<img src="images/client1.png" class="client-logo">
+<img src="images/client2.png" class="client-logo">
+<img src="images/client3.png" class="client-logo">
+<img src="images/client4.png" class="client-logo">
+<img src="images/client5.png" class="client-logo">
 </div>
 
 </div>
@@ -317,7 +340,7 @@ View Profile
 <h2>Legal Disclaimer</h2>
 
 <p style="text-align:center;">
-As per Bar Council of India rules, this website is for informational purposes only and does not constitute advertisement or legal solicitation.
+As per Bar Council of India rules, this website is for informational purposes only.
 </p>
 
 </div>
